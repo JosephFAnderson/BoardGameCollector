@@ -3,6 +3,9 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT
 
+app.use(express.json());
+app.use(express.urlencoded( { extended:true } ));
+
 // Here to test server is running. 
 // Delete in future
 app.get('/', (req, res) => {
@@ -10,5 +13,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Listening at: http://localhost:${port}`);
 })
