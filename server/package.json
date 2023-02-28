@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "boardgamegeekclient": "^1.7.2",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
