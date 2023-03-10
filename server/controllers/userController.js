@@ -17,7 +17,6 @@ module.exports = {
             const userData = await User.create(req.body);
             res.status(200).json(userData);
         }catch (err) {
-            console.log(err);
             res.status(500).json(err);
         }
     },
@@ -27,7 +26,6 @@ module.exports = {
             const updatedUser = await User.findOneAndUpdate({_id: id}, req.body, { new: true });
             res.status(200).json(updatedUser);
         }catch (err) {
-            console.log(err);
             res.status(500).json(err);
         }
     }
