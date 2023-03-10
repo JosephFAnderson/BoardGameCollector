@@ -19,5 +19,14 @@ module.exports = {
         }catch (err) {
             res.status(500).json(err);
         }
+    },
+    updateUser: async (req, res) => {
+        try{
+            const id = req.params.id;
+            const updatedUser = await User.findOneAndUpdate({_id: id}, req.body, { new: true });
+            res.status(200).json(updatedUser);
+        }catch (err) {
+            res.status(500).json(err);
+        }
     }
 }
